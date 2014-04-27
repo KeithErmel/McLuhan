@@ -14,15 +14,11 @@ NSString *const kTargetAppUrl   = @"mcluhan.targetapp";
 
 @implementation TAAppDelegate
 
-#pragma mark - McLuhanResponder
-
--(BOOL)canOpenUrlScheme:(NSString *)urlScheme {return [urlScheme isEqualToString:kTargetAppUrl];}
-
-
 #pragma mark - Application Lifecycle
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self.schemeRegistry addUrlScheme:kTargetAppUrl];
     return YES;
 }
 
