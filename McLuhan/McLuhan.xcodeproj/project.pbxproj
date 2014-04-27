@@ -18,6 +18,9 @@
 		9EA5D161190D6B8100D0DB14 /* McLuhan.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EA5D15D190D6A8300D0DB14 /* McLuhan.h */; };
 		9EA5D165190D756A00D0DB14 /* McLuhanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D164190D756A00D0DB14 /* McLuhanAppDelegate.m */; };
 		9EA5D166190D765F00D0DB14 /* McLuhanAppDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EA5D163190D756A00D0DB14 /* McLuhanAppDelegate.h */; };
+		9EA5D16A190D7BF200D0DB14 /* SchemeRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D169190D7BF200D0DB14 /* SchemeRegistry.m */; };
+		9EA5D16E190D7D9C00D0DB14 /* SchemeRegistryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D16D190D7D9C00D0DB14 /* SchemeRegistryTests.m */; };
+		9EA5D16F190D957D00D0DB14 /* SchemeRegistry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EA5D168190D7BF200D0DB14 /* SchemeRegistry.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				9EA5D16F190D957D00D0DB14 /* SchemeRegistry.h in CopyFiles */,
 				9EA5D166190D765F00D0DB14 /* McLuhanAppDelegate.h in CopyFiles */,
 				9EA5D161190D6B8100D0DB14 /* McLuhan.h in CopyFiles */,
 			);
@@ -58,6 +62,9 @@
 		9EA5D15E190D6A8300D0DB14 /* McLuhan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McLuhan.m; sourceTree = "<group>"; };
 		9EA5D163190D756A00D0DB14 /* McLuhanAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McLuhanAppDelegate.h; sourceTree = "<group>"; };
 		9EA5D164190D756A00D0DB14 /* McLuhanAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McLuhanAppDelegate.m; sourceTree = "<group>"; };
+		9EA5D168190D7BF200D0DB14 /* SchemeRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeRegistry.h; sourceTree = "<group>"; };
+		9EA5D169190D7BF200D0DB14 /* SchemeRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeRegistry.m; sourceTree = "<group>"; };
+		9EA5D16D190D7D9C00D0DB14 /* SchemeRegistryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeRegistryTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +139,7 @@
 		9EA5D0A8190D67A600D0DB14 /* McLuhanTests */ = {
 			isa = PBXGroup;
 			children = (
+				9EA5D16B190D7D7500D0DB14 /* Source */,
 				9EA5D0AE190D67A600D0DB14 /* McLuhanTests.m */,
 				9EA5D0A9190D67A600D0DB14 /* Supporting Files */,
 			);
@@ -151,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA5D162190D753800D0DB14 /* App */,
+				9EA5D167190D7BD300D0DB14 /* Schemes */,
 				9EA5D15D190D6A8300D0DB14 /* McLuhan.h */,
 				9EA5D15E190D6A8300D0DB14 /* McLuhan.m */,
 			);
@@ -164,6 +173,31 @@
 				9EA5D164190D756A00D0DB14 /* McLuhanAppDelegate.m */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		9EA5D167190D7BD300D0DB14 /* Schemes */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D168190D7BF200D0DB14 /* SchemeRegistry.h */,
+				9EA5D169190D7BF200D0DB14 /* SchemeRegistry.m */,
+			);
+			path = Schemes;
+			sourceTree = "<group>";
+		};
+		9EA5D16B190D7D7500D0DB14 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D16C190D7D7500D0DB14 /* Schemes */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		9EA5D16C190D7D7500D0DB14 /* Schemes */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D16D190D7D9C00D0DB14 /* SchemeRegistryTests.m */,
+			);
+			path = Schemes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA5D15F190D6A8300D0DB14 /* McLuhan.m in Sources */,
+				9EA5D16A190D7BF200D0DB14 /* SchemeRegistry.m in Sources */,
 				9EA5D165190D756A00D0DB14 /* McLuhanAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA5D0AF190D67A600D0DB14 /* McLuhanTests.m in Sources */,
+				9EA5D16E190D7D9C00D0DB14 /* SchemeRegistryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,7 @@
     NSLog(@"     path: %@", url.path);
     NSLog(@"    query: %@", url.query);
     
-    if ([self canOpenUrlScheme:url.scheme]) {
+    if ([self.schemeRegistry containsUrlScheme:url.scheme]) {
         if ([url.host isEqualToString:kXCallbackUrl]) {
             NSString *action = [url.path substringFromIndex:1];
             NSString *params = url.query ? url.query : @"";
@@ -50,12 +50,13 @@
 }
 
 
-#pragma mark - McLuhanResponder
+#pragma mark - Initialization
 
--(BOOL)canOpenUrlScheme:(NSString *)urlScheme
+-(id)init
 {
-    [NSException raise:@"canOpenUrlScheme: must be implemented by subclass" format:nil];
-    return NO;
+    self = [super init];
+    if (self) {_schemeRegistry = [SchemeRegistry new];}
+    return self;
 }
 
 @end

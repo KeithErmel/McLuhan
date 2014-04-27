@@ -7,13 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SchemeRegistry.h"
 
 
-@protocol McLuhanResponder <NSObject>
--(BOOL)canOpenUrlScheme:(NSString *)urlScheme;
-@end
-
-
-@interface McLuhanAppDelegate : UIResponder <UIApplicationDelegate, McLuhanResponder>
+@interface McLuhanAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, readonly) SchemeRegistry *schemeRegistry;
 @end
