@@ -1,5 +1,5 @@
 //
-//  SAViewController.h
+//  SASendActionsViewController.h
 //  McLuhanSourceApp
 //
 //  Created by Keith Ermel on 4/27/14.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface SAViewController : UIViewController
+@interface SASendActionsViewController : UIViewController
 
 @end

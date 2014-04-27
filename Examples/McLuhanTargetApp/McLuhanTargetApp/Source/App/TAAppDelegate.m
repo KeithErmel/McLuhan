@@ -7,9 +7,7 @@
 //
 
 #import "TAAppDelegate.h"
-
-
-NSString *const kTargetAppUrl   = @"mcluhan.targetapp";
+#import "SACommon.h"
 
 
 @implementation TAAppDelegate

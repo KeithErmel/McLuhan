@@ -25,6 +25,7 @@
 		9EA5D15A190D6A2700D0DB14 /* SASendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D156190D6A2700D0DB14 /* SASendViewController.m */; };
 		9EA5D15B190D6A2700D0DB14 /* SASendReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D159190D6A2700D0DB14 /* SASendReceiveViewController.m */; };
 		9EA5D160190D6B5D00D0DB14 /* libMcLuhan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA5D13C190D688D00D0DB14 /* libMcLuhan.a */; };
+		9EA5D172190D9BF900D0DB14 /* SASendActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D171190D9BF900D0DB14 /* SASendActionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,9 @@
 		9EA5D156190D6A2700D0DB14 /* SASendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASendViewController.m; sourceTree = "<group>"; };
 		9EA5D158190D6A2700D0DB14 /* SASendReceiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASendReceiveViewController.h; sourceTree = "<group>"; };
 		9EA5D159190D6A2700D0DB14 /* SASendReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASendReceiveViewController.m; sourceTree = "<group>"; };
+		9EA5D170190D9BF900D0DB14 /* SASendActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASendActionsViewController.h; sourceTree = "<group>"; };
+		9EA5D171190D9BF900D0DB14 /* SASendActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASendActionsViewController.m; sourceTree = "<group>"; };
+		9EA5D174190DA8ED00D0DB14 /* SACommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SACommon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 				9EA5D143190D697600D0DB14 /* App */,
 				9EA5D154190D6A2700D0DB14 /* Send */,
 				9EA5D157190D6A2700D0DB14 /* SendReceive */,
+				9EA5D174190DA8ED00D0DB14 /* SACommon.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -197,6 +202,8 @@
 			children = (
 				9EA5D155190D6A2700D0DB14 /* SASendViewController.h */,
 				9EA5D156190D6A2700D0DB14 /* SASendViewController.m */,
+				9EA5D170190D9BF900D0DB14 /* SASendActionsViewController.h */,
+				9EA5D171190D9BF900D0DB14 /* SASendActionsViewController.m */,
 			);
 			path = Send;
 			sourceTree = "<group>";
@@ -312,6 +319,7 @@
 				9EA5D149190D697600D0DB14 /* SAViewController.m in Sources */,
 				9EA5D15B190D6A2700D0DB14 /* SASendReceiveViewController.m in Sources */,
 				9EA5D15A190D6A2700D0DB14 /* SASendViewController.m in Sources */,
+				9EA5D172190D9BF900D0DB14 /* SASendActionsViewController.m in Sources */,
 				9EA5D0D1190D681000D0DB14 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

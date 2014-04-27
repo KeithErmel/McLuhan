@@ -9,34 +9,23 @@
 #import "SAViewController.h"
 #import "Luokat/UIStoryboardSegue+Utils.h"
 #import "SASendReceiveViewController.h"
-#import "SASendViewController.h"
 
 
 NSString *const kSourceTargetOneWaySegue    = @"sourceTargetOneWaySegue";
 NSString *const kSourceTargetTwoWaySegue    = @"sourceTargetTwoWaySegue";
 
 
-@interface SAViewController ()<SASendViewControllerDelegate>
-// Outlets
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@interface SAViewController ()
 @end
 
 
 @implementation SAViewController
-
-#pragma mark - SASendViewControllerDelegate
-
--(void)didFailToOpenURL:(NSURL *)url
-{
-    self.statusLabel.text = [NSString stringWithFormat:@"Unable to open url: %@", url.absoluteString];
-}
 
 
 #pragma mark - Configuration
 
 -(void)configureSourceVC:(UIStoryboardSegue *)segue
 {
-    ((SASendViewController *)segue.destinationViewController).delegate = self;
 }
 
 -(void)configureTargetVC:(UIStoryboardSegue *)segue

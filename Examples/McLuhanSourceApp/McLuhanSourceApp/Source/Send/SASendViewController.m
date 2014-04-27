@@ -8,11 +8,8 @@
 
 #import "SASendViewController.h"
 #import "McLuhan/McLuhan.h"
+#import "SACommon.h"
 #import "SAAppDelegate.h"
-
-
-NSString *const kTargetAppUrl   = @"mcluhan.targetapp";
-NSString *const kSendAction     = @"send";
 
 
 @interface SASendViewController ()<UITextFieldDelegate>
@@ -22,24 +19,24 @@ NSString *const kSendAction     = @"send";
 
 @implementation SASendViewController
 
+#pragma mark - Public API
+
+-(void)sendMessage:(NSString *)message {[self postToTargetAppWithText:message];}
+
 
 #pragma mark - Internal API
 
--(void)postToTargetApp
+-(void)postToTargetAppWithText:(NSString *)text
 {
-    NSURL *url = [NSURL URLWithString:[self buildURLString]];
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        [[UIApplication sharedApplication] openURL:url];
-    }
-    else {
+    [McLuhan postToURLScheme:kTargetAppUrl action:kSendAction param:text success:nil failure:^(NSError *error) {
+        NSURL *url = [error.userInfo objectForKey:kMcLuhanErrorURLKey];
         [self.delegate didFailToOpenURL:url];
-    }
+    }];
 }
 
--(NSString *)buildURLString
+-(NSString *)buildURLStringWithText:(NSString *)text
 {
-    NSString *raw = [NSString stringWithFormat:@"%@://%@/%@?%@",
-                     kTargetAppUrl, kXCallbackUrl, kSendAction, self.sendTextInput.text];
+    NSString *raw = [NSString stringWithFormat:@"%@://%@/%@?%@", kTargetAppUrl, kXCallbackUrl, kSendAction, text];
     NSStringEncoding encoding = (NSStringEncoding)NSCharacterSet.URLQueryAllowedCharacterSet;
     return [raw stringByAddingPercentEscapesUsingEncoding:encoding];
 }
@@ -51,7 +48,7 @@ NSString *const kSendAction     = @"send";
 {
     [self.sendTextInput resignFirstResponder];
     [self.navigationController popViewControllerAnimated:YES];
-    [self postToTargetApp];
+    [self postToTargetAppWithText:self.sendTextInput.text];
     return YES;
 }
 
