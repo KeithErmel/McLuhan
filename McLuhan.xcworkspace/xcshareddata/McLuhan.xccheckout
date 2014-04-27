@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B9436563-84F1-441A-8AE0-949FC281E0D1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>McLuhan</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5D2B344E-0C8F-4595-AED6-B662A338FC11</key>
+		<string>ssh://github.com/KeithErmel/Luokat.git</string>
+		<key>CDD84FB3-987C-4781-890E-1ACA4AF2BFF6</key>
+		<string>ssh://github.com/KeithErmel/McLuhan.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>McLuhan.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5D2B344E-0C8F-4595-AED6-B662A338FC11</key>
+		<string>../Luokat</string>
+		<key>CDD84FB3-987C-4781-890E-1ACA4AF2BFF6</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/KeithErmel/McLuhan.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CDD84FB3-987C-4781-890E-1ACA4AF2BFF6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5D2B344E-0C8F-4595-AED6-B662A338FC11</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Luokat</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CDD84FB3-987C-4781-890E-1ACA4AF2BFF6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>McLuhan</string>
+		</dict>
+	</array>
+</dict>
+</plist>

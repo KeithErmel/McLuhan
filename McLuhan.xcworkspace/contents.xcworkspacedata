@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Luokat/Luokat/Luokat.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:McLuhan/McLuhan.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Examples/McLuhanSourceApp/McLuhanSourceApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Examples/McLuhanTargetApp/McLuhanTargetApp.xcodeproj">
+   </FileRef>
+</Workspace>

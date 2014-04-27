@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EA5D093190D67A600D0DB14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA5D092190D67A600D0DB14 /* Foundation.framework */; };
+		9EA5D0A1190D67A600D0DB14 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA5D0A0190D67A600D0DB14 /* XCTest.framework */; };
+		9EA5D0A2190D67A600D0DB14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA5D092190D67A600D0DB14 /* Foundation.framework */; };
+		9EA5D0A4190D67A600D0DB14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA5D0A3190D67A600D0DB14 /* UIKit.framework */; };
+		9EA5D0A7190D67A600D0DB14 /* libMcLuhan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA5D08F190D67A600D0DB14 /* libMcLuhan.a */; };
+		9EA5D0AD190D67A600D0DB14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5D0AB190D67A600D0DB14 /* InfoPlist.strings */; };
+		9EA5D0AF190D67A600D0DB14 /* McLuhanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D0AE190D67A600D0DB14 /* McLuhanTests.m */; };
+		9EA5D15F190D6A8300D0DB14 /* McLuhan.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D15E190D6A8300D0DB14 /* McLuhan.m */; };
+		9EA5D161190D6B8100D0DB14 /* McLuhan.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EA5D15D190D6A8300D0DB14 /* McLuhan.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9EA5D0A5190D67A600D0DB14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EA5D087190D67A600D0DB14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EA5D08E190D67A600D0DB14;
+			remoteInfo = McLuhan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9EA5D08D190D67A600D0DB14 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				9EA5D161190D6B8100D0DB14 /* McLuhan.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9EA5D08F190D67A600D0DB14 /* libMcLuhan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMcLuhan.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA5D092190D67A600D0DB14 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9EA5D096190D67A600D0DB14 /* McLuhan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "McLuhan-Prefix.pch"; sourceTree = "<group>"; };
+		9EA5D09F190D67A600D0DB14 /* McLuhanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = McLuhanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA5D0A0190D67A600D0DB14 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9EA5D0A3190D67A600D0DB14 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9EA5D0AA190D67A600D0DB14 /* McLuhanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "McLuhanTests-Info.plist"; sourceTree = "<group>"; };
+		9EA5D0AC190D67A600D0DB14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9EA5D0AE190D67A600D0DB14 /* McLuhanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = McLuhanTests.m; sourceTree = "<group>"; };
+		9EA5D15D190D6A8300D0DB14 /* McLuhan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McLuhan.h; sourceTree = "<group>"; };
+		9EA5D15E190D6A8300D0DB14 /* McLuhan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McLuhan.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EA5D08C190D67A600D0DB14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA5D093190D67A600D0DB14 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EA5D09C190D67A600D0DB14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA5D0A1190D67A600D0DB14 /* XCTest.framework in Frameworks */,
+				9EA5D0A4190D67A600D0DB14 /* UIKit.framework in Frameworks */,
+				9EA5D0A7190D67A600D0DB14 /* libMcLuhan.a in Frameworks */,
+				9EA5D0A2190D67A600D0DB14 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9EA5D086190D67A600D0DB14 = {
+			isa = PBXGroup;
+			children = (
+				9EA5D094190D67A600D0DB14 /* McLuhan */,
+				9EA5D0A8190D67A600D0DB14 /* McLuhanTests */,
+				9EA5D091190D67A600D0DB14 /* Frameworks */,
+				9EA5D090190D67A600D0DB14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9EA5D090190D67A600D0DB14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D08F190D67A600D0DB14 /* libMcLuhan.a */,
+				9EA5D09F190D67A600D0DB14 /* McLuhanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EA5D091190D67A600D0DB14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D092190D67A600D0DB14 /* Foundation.framework */,
+				9EA5D0A0190D67A600D0DB14 /* XCTest.framework */,
+				9EA5D0A3190D67A600D0DB14 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EA5D094190D67A600D0DB14 /* McLuhan */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D15C190D6A8300D0DB14 /* Source */,
+				9EA5D095190D67A600D0DB14 /* Supporting Files */,
+			);
+			path = McLuhan;
+			sourceTree = "<group>";
+		};
+		9EA5D095190D67A600D0DB14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D096190D67A600D0DB14 /* McLuhan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EA5D0A8190D67A600D0DB14 /* McLuhanTests */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D0AE190D67A600D0DB14 /* McLuhanTests.m */,
+				9EA5D0A9190D67A600D0DB14 /* Supporting Files */,
+			);
+			path = McLuhanTests;
+			sourceTree = "<group>";
+		};
+		9EA5D0A9190D67A600D0DB14 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D0AA190D67A600D0DB14 /* McLuhanTests-Info.plist */,
+				9EA5D0AB190D67A600D0DB14 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EA5D15C190D6A8300D0DB14 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D15D190D6A8300D0DB14 /* McLuhan.h */,
+				9EA5D15E190D6A8300D0DB14 /* McLuhan.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EA5D08E190D67A600D0DB14 /* McLuhan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EA5D0B2190D67A600D0DB14 /* Build configuration list for PBXNativeTarget "McLuhan" */;
+			buildPhases = (
+				9EA5D08B190D67A600D0DB14 /* Sources */,
+				9EA5D08C190D67A600D0DB14 /* Frameworks */,
+				9EA5D08D190D67A600D0DB14 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = McLuhan;
+			productName = McLuhan;
+			productReference = 9EA5D08F190D67A600D0DB14 /* libMcLuhan.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9EA5D09E190D67A600D0DB14 /* McLuhanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EA5D0B5190D67A600D0DB14 /* Build configuration list for PBXNativeTarget "McLuhanTests" */;
+			buildPhases = (
+				9EA5D09B190D67A600D0DB14 /* Sources */,
+				9EA5D09C190D67A600D0DB14 /* Frameworks */,
+				9EA5D09D190D67A600D0DB14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EA5D0A6190D67A600D0DB14 /* PBXTargetDependency */,
+			);
+			name = McLuhanTests;
+			productName = McLuhanTests;
+			productReference = 9EA5D09F190D67A600D0DB14 /* McLuhanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EA5D087190D67A600D0DB14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Keith Ermel";
+			};
+			buildConfigurationList = 9EA5D08A190D67A600D0DB14 /* Build configuration list for PBXProject "McLuhan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9EA5D086190D67A600D0DB14;
+			productRefGroup = 9EA5D090190D67A600D0DB14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EA5D08E190D67A600D0DB14 /* McLuhan */,
+				9EA5D09E190D67A600D0DB14 /* McLuhanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EA5D09D190D67A600D0DB14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA5D0AD190D67A600D0DB14 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EA5D08B190D67A600D0DB14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA5D15F190D6A8300D0DB14 /* McLuhan.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EA5D09B190D67A600D0DB14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EA5D0AF190D67A600D0DB14 /* McLuhanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9EA5D0A6190D67A600D0DB14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EA5D08E190D67A600D0DB14 /* McLuhan */;
+			targetProxy = 9EA5D0A5190D67A600D0DB14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9EA5D0AB190D67A600D0DB14 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EA5D0AC190D67A600D0DB14 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EA5D0B0190D67A600D0DB14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9EA5D0B1190D67A600D0DB14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EA5D0B3190D67A600D0DB14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/McLuhan.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "McLuhan/McLuhan-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9EA5D0B4190D67A600D0DB14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/McLuhan.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "McLuhan/McLuhan-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9EA5D0B6190D67A600D0DB14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "McLuhan/McLuhan-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "McLuhanTests/McLuhanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9EA5D0B7190D67A600D0DB14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "McLuhan/McLuhan-Prefix.pch";
+				INFOPLIST_FILE = "McLuhanTests/McLuhanTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EA5D08A190D67A600D0DB14 /* Build configuration list for PBXProject "McLuhan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EA5D0B0190D67A600D0DB14 /* Debug */,
+				9EA5D0B1190D67A600D0DB14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EA5D0B2190D67A600D0DB14 /* Build configuration list for PBXNativeTarget "McLuhan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EA5D0B3190D67A600D0DB14 /* Debug */,
+				9EA5D0B4190D67A600D0DB14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EA5D0B5190D67A600D0DB14 /* Build configuration list for PBXNativeTarget "McLuhanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EA5D0B6190D67A600D0DB14 /* Debug */,
+				9EA5D0B7190D67A600D0DB14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9EA5D087190D67A600D0DB14 /* Project object */;
+}
