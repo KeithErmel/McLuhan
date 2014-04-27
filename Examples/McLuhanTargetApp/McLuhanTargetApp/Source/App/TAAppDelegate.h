@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "McLuhan/McLuhan.h"
+#import "McLuhan/McLuhanAppDelegate.h"
 
-@interface TAAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
+@interface TAAppDelegate : McLuhanAppDelegate
 @end

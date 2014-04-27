@@ -16,6 +16,8 @@
 		9EA5D0AF190D67A600D0DB14 /* McLuhanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D0AE190D67A600D0DB14 /* McLuhanTests.m */; };
 		9EA5D15F190D6A8300D0DB14 /* McLuhan.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D15E190D6A8300D0DB14 /* McLuhan.m */; };
 		9EA5D161190D6B8100D0DB14 /* McLuhan.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EA5D15D190D6A8300D0DB14 /* McLuhan.h */; };
+		9EA5D165190D756A00D0DB14 /* McLuhanAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D164190D756A00D0DB14 /* McLuhanAppDelegate.m */; };
+		9EA5D166190D765F00D0DB14 /* McLuhanAppDelegate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EA5D163190D756A00D0DB14 /* McLuhanAppDelegate.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				9EA5D166190D765F00D0DB14 /* McLuhanAppDelegate.h in CopyFiles */,
 				9EA5D161190D6B8100D0DB14 /* McLuhan.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +56,8 @@
 		9EA5D0AE190D67A600D0DB14 /* McLuhanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = McLuhanTests.m; sourceTree = "<group>"; };
 		9EA5D15D190D6A8300D0DB14 /* McLuhan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McLuhan.h; sourceTree = "<group>"; };
 		9EA5D15E190D6A8300D0DB14 /* McLuhan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McLuhan.m; sourceTree = "<group>"; };
+		9EA5D163190D756A00D0DB14 /* McLuhanAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McLuhanAppDelegate.h; sourceTree = "<group>"; };
+		9EA5D164190D756A00D0DB14 /* McLuhanAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McLuhanAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +150,20 @@
 		9EA5D15C190D6A8300D0DB14 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				9EA5D162190D753800D0DB14 /* App */,
 				9EA5D15D190D6A8300D0DB14 /* McLuhan.h */,
 				9EA5D15E190D6A8300D0DB14 /* McLuhan.m */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		9EA5D162190D753800D0DB14 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5D163190D756A00D0DB14 /* McLuhanAppDelegate.h */,
+				9EA5D164190D756A00D0DB14 /* McLuhanAppDelegate.m */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA5D15F190D6A8300D0DB14 /* McLuhan.m in Sources */,
+				9EA5D165190D756A00D0DB14 /* McLuhanAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
