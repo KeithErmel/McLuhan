@@ -8,7 +8,7 @@
 
 #import "SASendViewController.h"
 #import "McLuhan/McLuhan.h"
-#import "SACommon.h"
+#import "McLuhanExampleCommon/McLuhanExampleCommon.h"
 #import "SAAppDelegate.h"
 
 

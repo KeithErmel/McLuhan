@@ -8,9 +8,7 @@
 
 #import "TAViewController.h"
 #import "McLuhan/McLuhan.h"
-
-
-NSString *const kSendAction     = @"send";
+#import "McLuhanExampleCommon/McLuhanExampleCommon.h"
 
 
 @interface TAViewController ()

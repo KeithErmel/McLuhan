@@ -7,7 +7,7 @@
 //
 
 #import "TAAppDelegate.h"
-#import "TACommon.h"
+#import "McLuhanExampleCommon/McLuhanExampleCommon.h"
 
 
 @implementation TAAppDelegate

@@ -8,6 +8,9 @@
       location = "group:McLuhan/McLuhan.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Examples/McLuhanExampleCommon/McLuhanExampleCommon.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Examples/McLuhanSourceApp/McLuhanSourceApp.xcodeproj">
    </FileRef>
    <FileRef

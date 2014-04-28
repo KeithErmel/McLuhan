@@ -26,6 +26,7 @@
 		9EA5D15B190D6A2700D0DB14 /* SASendReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D159190D6A2700D0DB14 /* SASendReceiveViewController.m */; };
 		9EA5D160190D6B5D00D0DB14 /* libMcLuhan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EA5D13C190D688D00D0DB14 /* libMcLuhan.a */; };
 		9EA5D172190D9BF900D0DB14 /* SASendActionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5D171190D9BF900D0DB14 /* SASendActionsViewController.m */; };
+		9EB6774E190EA4A10091B636 /* libMcLuhanExampleCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB6774D190EA4A10091B636 /* libMcLuhanExampleCommon.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +67,8 @@
 		9EA5D159190D6A2700D0DB14 /* SASendReceiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASendReceiveViewController.m; sourceTree = "<group>"; };
 		9EA5D170190D9BF900D0DB14 /* SASendActionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SASendActionsViewController.h; sourceTree = "<group>"; };
 		9EA5D171190D9BF900D0DB14 /* SASendActionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SASendActionsViewController.m; sourceTree = "<group>"; };
-		9EA5D174190DA8ED00D0DB14 /* SACommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SACommon.h; sourceTree = "<group>"; };
+		9EB6774B190EA48E0091B636 /* libMcLuhanExampleCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMcLuhanExampleCommon.a; path = "../McLuhanExampleCommon/build/Debug-iphoneos/libMcLuhanExampleCommon.a"; sourceTree = "<group>"; };
+		9EB6774D190EA4A10091B636 /* libMcLuhanExampleCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMcLuhanExampleCommon.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/McLuhan-apcclaabpntfhoabulnyotvowwim/Build/Products/Debug-iphoneos/libMcLuhanExampleCommon.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EB6774E190EA4A10091B636 /* libMcLuhanExampleCommon.a in Frameworks */,
 				9EA5D160190D6B5D00D0DB14 /* libMcLuhan.a in Frameworks */,
 				9EA5D141190D694C00D0DB14 /* libLuokat.a in Frameworks */,
 				9EA5D0C7190D681000D0DB14 /* CoreGraphics.framework in Frameworks */,
@@ -117,6 +120,8 @@
 		9EA5D0C3190D681000D0DB14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9EB6774D190EA4A10091B636 /* libMcLuhanExampleCommon.a */,
+				9EB6774B190EA48E0091B636 /* libMcLuhanExampleCommon.a */,
 				9EA5D140190D694C00D0DB14 /* libLuokat.a */,
 				9EA5D13C190D688D00D0DB14 /* libMcLuhan.a */,
 				9EA5D0C4190D681000D0DB14 /* Foundation.framework */,
@@ -172,7 +177,6 @@
 				9EA5D143190D697600D0DB14 /* App */,
 				9EA5D154190D6A2700D0DB14 /* Send */,
 				9EA5D157190D6A2700D0DB14 /* SendReceive */,
-				9EA5D174190DA8ED00D0DB14 /* SACommon.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -451,6 +455,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/McLuhan-apcclaabpntfhoabulnyotvowwim/Build/Products/Debug-iphoneos",
+					"/Users/kermel/Code/iOS/projects/McLuhan/Examples/McLuhanExampleCommon/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -469,6 +474,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/McLuhan-apcclaabpntfhoabulnyotvowwim/Build/Products/Debug-iphoneos",
+					"/Users/kermel/Code/iOS/projects/McLuhan/Examples/McLuhanExampleCommon/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,6 +541,7 @@
 				9EA5D0F5190D681000D0DB14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9EA5D0F6190D681000D0DB14 /* Build configuration list for PBXNativeTarget "McLuhanSourceAppTests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +550,7 @@
 				9EA5D0F8190D681000D0DB14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

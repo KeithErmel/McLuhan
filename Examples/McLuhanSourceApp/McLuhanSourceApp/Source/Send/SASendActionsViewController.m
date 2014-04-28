@@ -9,7 +9,7 @@
 #import "SASendActionsViewController.h"
 #import "Luokat/UIStoryboardSegue+Utils.h"
 #import "McLuhan/McLuhan.h"
-#import "SACommon.h"
+#import "McLuhanExampleCommon/McLuhanExampleCommon.h"
 #import "SASendViewController.h"
 
 
