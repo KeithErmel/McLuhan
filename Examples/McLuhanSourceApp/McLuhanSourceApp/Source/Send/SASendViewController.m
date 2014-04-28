@@ -28,9 +28,8 @@
 
 -(void)postToTargetAppWithText:(NSString *)text
 {
-    [McLuhan postToURLScheme:kTargetAppUrl action:kSendAction param:text success:nil failure:^(NSError *error) {
-        NSURL *url = [error.userInfo objectForKey:kMcLuhanErrorURLKey];
-        [self.delegate didFailToOpenURL:url];
+    [McLuhan callURLScheme:kTargetAppUrl action:kSendAction param:text completion:^(NSURL *url, NSError *error) {
+        if (error) {[self.delegate didFailToOpenURL:url];}
     }];
 }
 

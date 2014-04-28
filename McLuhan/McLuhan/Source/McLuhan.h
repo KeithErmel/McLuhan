@@ -20,14 +20,12 @@ extern NSInteger const kCantOpenURL;
 extern NSInteger const kErrorOpeningURL;
 extern NSString *const kMcLuhanErrorURLKey;
 
-typedef void(^PostToURLSchemeSuccess)(NSURL *url);
-typedef void(^PostToURLSchemeFailure)(NSError *error);
+typedef void(^PostToURLSchemeCompletion)(NSURL *url, NSError *error);
 
 
 @interface McLuhan : NSObject
-+(void)postToURLScheme:(NSString *)urlScheme
-                action:(NSString *)action
-                 param:(NSString *)param
-               success:(PostToURLSchemeSuccess)success
-               failure:(PostToURLSchemeFailure)failure;
++(void)callURLScheme:(NSString *)urlScheme
+              action:(NSString *)action
+               param:(NSString *)param
+          completion:(PostToURLSchemeCompletion)completion;
 @end

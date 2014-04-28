@@ -37,14 +37,12 @@ NSString *const kSendMessageSegue   = @"sendMessageSegue";
 
 -(IBAction)sendTestAction:(id)sender
 {
-    [McLuhan postToURLScheme:kTargetAppUrl
-                      action:kSendAction
-                       param:kTestMessage
-                     success:nil
-                     failure:^(NSError *error) {
-                         NSURL *url = [error.userInfo objectForKey:kMcLuhanErrorURLKey];
-                         [self didFailToOpenURL:url];
-                     }];
+    [McLuhan callURLScheme:kTargetAppUrl
+                    action:kSendAction
+                     param:kTestMessage
+                completion:^(NSURL *url, NSError *error) {
+                    [self didFailToOpenURL:url];
+                }];
 }
 
 

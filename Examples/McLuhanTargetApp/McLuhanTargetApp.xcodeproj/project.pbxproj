@@ -57,6 +57,7 @@
 		9EA5D14E190D69C600D0DB14 /* TAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAppDelegate.m; sourceTree = "<group>"; };
 		9EA5D14F190D69C600D0DB14 /* TAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAViewController.h; sourceTree = "<group>"; };
 		9EA5D150190D69C600D0DB14 /* TAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAViewController.m; sourceTree = "<group>"; };
+		9EA8050A190E9036005B0BB7 /* TACommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TACommon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				9EA5D14C190D69C600D0DB14 /* App */,
+				9EA8050A190E9036005B0BB7 /* TACommon.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -499,6 +501,7 @@
 				9EA5D136190D683800D0DB14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9EA5D137190D683800D0DB14 /* Build configuration list for PBXNativeTarget "McLuhanTargetAppTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +510,7 @@
 				9EA5D139190D683800D0DB14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

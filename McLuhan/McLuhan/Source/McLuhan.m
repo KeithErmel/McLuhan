@@ -26,43 +26,37 @@ NSString *const kMcLuhanUrlParamsKey    = @"mcluhan.url.params";
 
 #pragma mark - Public API
 
-+(void)postToURLScheme:(NSString *)urlScheme
-                action:(NSString *)action
-                 param:(NSString *)param
-               success:(PostToURLSchemeSuccess)success
-               failure:(PostToURLSchemeFailure)failure
++(void)callURLScheme:(NSString *)urlScheme
+              action:(NSString *)action
+               param:(NSString *)param
+          completion:(PostToURLSchemeCompletion)completion
 {
     NSError *error;
-    NSURL *url = [NSURL URLWithString:[McLuhan buildURLForScheme:urlScheme action:action param:param]];
+    NSURL *url = [NSURL URLWithString:[McLuhan buildURLWithScheme:urlScheme action:action param:param]];
+    NSInteger errorCode;
+
+    if ([[UIApplication sharedApplication] canOpenURL:url] == NO) {errorCode = kCantOpenURL;}
+    else if ([[UIApplication sharedApplication] openURL:url] == NO) {errorCode = kErrorOpeningURL;}
     
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        if ([[UIApplication sharedApplication] openURL:url] == NO) {
-            error = [McLuhan errorWithCode:kErrorOpeningURL url:url];
-        }
-    }
-    else {
-        error = [McLuhan errorWithCode:kCantOpenURL url:url];
-    }
-    
-    if (error) {if (failure) {failure(error);}}
-    else {if (success) {success(url);}}
+    if (errorCode) {error = [McLuhan errorWithCode:errorCode];}
+    if (completion) {completion(url, error);}
 }
 
 
 #pragma mark - Internal API
 
-+(NSString *)buildURLForScheme:(NSString *)urlScheme
-                        action:(NSString *)action
-                         param:(NSString *)param
++(NSString *)buildURLWithScheme:(NSString *)urlScheme
+                         action:(NSString *)action
+                          param:(NSString *)param
 {
     NSString *raw = [NSString stringWithFormat:@"%@://%@/%@?%@", urlScheme, kXCallbackUrl, action, param];
     NSStringEncoding encoding = (NSStringEncoding)NSCharacterSet.URLQueryAllowedCharacterSet;
     return [raw stringByAddingPercentEscapesUsingEncoding:encoding];
 }
 
-+(NSError *)errorWithCode:(NSInteger)code url:(NSURL *)url
++(NSError *)errorWithCode:(NSInteger)code
 {
-    return [NSError errorWithDomain:kMcLuhanErrorDomain code:code userInfo:@{kMcLuhanErrorURLKey: url}];
+    return [NSError errorWithDomain:kMcLuhanErrorDomain code:code userInfo:nil];
 }
 
 @end

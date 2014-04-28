@@ -1,13 +1,13 @@
 //
-//  SACommon.h
-//  McLuhanSourceApp
+//  TACommon.h
+//  McLuhanTargetApp
 //
-//  Created by Keith Ermel on 4/27/14.
+//  Created by Keith Ermel on 4/28/14.
 //  Copyright (c) 2014 Keith Ermel. All rights reserved.
 //
 
-#ifndef McLuhanSourceApp_SACommon_h
-#define McLuhanSourceApp_SACommon_h
+#ifndef McLuhanTargetApp_TACommon_h
+#define McLuhanTargetApp_TACommon_h
 
 #define kSourceAppUrl   @"mcluhan.sourceapp"
 #define kTargetAppUrl   @"mcluhan.targetapp"
