@@ -11,7 +11,10 @@
 
 NSString *const kSourceAppUrl   = @"mcluhan.sourceapp";
 NSString *const kTargetAppUrl   = @"mcluhan.targetapp";
+
+NSString *const kNoOpAction     = @"no.op";
 NSString *const kSendAction     = @"send";
+
 NSString *const kTestMessage    = @"test";
 
 

@@ -25,16 +25,30 @@ NSString *const kMcLuhanUrlParamsKey    = @"mcluhan.url.params";
 @implementation McLuhan
 
 #pragma mark - Public API
++(void)callURLScheme:(NSString *)urlScheme
+          completion:(CallURLSchemeCompletion)completion
+{
+    NSURL *url = [NSURL URLWithString:[McLuhan buildURLWithScheme:urlScheme]];
+    [McLuhan callURL:url completion:completion];
+}
 
 +(void)callURLScheme:(NSString *)urlScheme
               action:(NSString *)action
                param:(NSString *)param
-          completion:(PostToURLSchemeCompletion)completion
+          completion:(CallURLSchemeCompletion)completion
+{
+    NSURL *url = [NSURL URLWithString:[McLuhan buildURLWithScheme:urlScheme action:action param:param]];
+    [McLuhan callURL:url completion:completion];
+}
+
+
+#pragma mark - Internal API
+
++(void)callURL:(NSURL *)url completion:(CallURLSchemeCompletion)completion
 {
     NSError *error;
-    NSURL *url = [NSURL URLWithString:[McLuhan buildURLWithScheme:urlScheme action:action param:param]];
-    NSInteger errorCode;
-
+    NSInteger errorCode = 0;
+    
     if ([[UIApplication sharedApplication] canOpenURL:url] == NO) {errorCode = kCantOpenURL;}
     else if ([[UIApplication sharedApplication] openURL:url] == NO) {errorCode = kErrorOpeningURL;}
     
@@ -42,8 +56,12 @@ NSString *const kMcLuhanUrlParamsKey    = @"mcluhan.url.params";
     if (completion) {completion(url, error);}
 }
 
-
-#pragma mark - Internal API
++(NSString *)buildURLWithScheme:(NSString *)urlScheme
+{
+    NSString *raw = [NSString stringWithFormat:@"%@:", urlScheme];
+    NSStringEncoding encoding = (NSStringEncoding)NSCharacterSet.URLQueryAllowedCharacterSet;
+    return [raw stringByAddingPercentEscapesUsingEncoding:encoding];
+}
 
 +(NSString *)buildURLWithScheme:(NSString *)urlScheme
                          action:(NSString *)action

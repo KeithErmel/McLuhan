@@ -21,23 +21,17 @@
 
 #pragma mark - Public API
 
--(void)sendMessage:(NSString *)message {[self postToTargetAppWithText:message];}
+-(void)sendMessage:(NSString *)message {[self callTargetAppWithText:message];}
 
 
 #pragma mark - Internal API
 
--(void)postToTargetAppWithText:(NSString *)text
+-(void)callTargetAppWithText:(NSString *)text
 {
-    [McLuhan callURLScheme:kTargetAppUrl action:kSendAction param:text completion:^(NSURL *url, NSError *error) {
-        if (error) {[self.delegate didFailToOpenURL:url];}
-    }];
-}
-
--(NSString *)buildURLStringWithText:(NSString *)text
-{
-    NSString *raw = [NSString stringWithFormat:@"%@://%@/%@?%@", kTargetAppUrl, kXCallbackUrl, kSendAction, text];
-    NSStringEncoding encoding = (NSStringEncoding)NSCharacterSet.URLQueryAllowedCharacterSet;
-    return [raw stringByAddingPercentEscapesUsingEncoding:encoding];
+    [McLuhan callURLScheme:kTargetAppUrl
+                    action:kSendAction
+                     param:text
+                completion:^(NSURL *url, NSError *error) {if (error) {[self.delegate didFailToOpenURL:url];}}];
 }
 
 
@@ -47,7 +41,7 @@
 {
     [self.sendTextInput resignFirstResponder];
     [self.navigationController popViewControllerAnimated:YES];
-    [self postToTargetAppWithText:self.sendTextInput.text];
+    [self callTargetAppWithText:self.sendTextInput.text];
     return YES;
 }
 

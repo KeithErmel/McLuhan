@@ -40,9 +40,7 @@ NSString *const kSendMessageSegue   = @"sendMessageSegue";
     [McLuhan callURLScheme:kTargetAppUrl
                     action:kSendAction
                      param:kTestMessage
-                completion:^(NSURL *url, NSError *error) {
-                    [self didFailToOpenURL:url];
-                }];
+                completion:^(NSURL *url, NSError *error) {if (error) {[self didFailToOpenURL:url];}}];
 }
 
 

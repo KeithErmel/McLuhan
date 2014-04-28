@@ -26,6 +26,20 @@
     self.receivedTextLabel.text = params;
 }
 
+-(void)didFailToOpenURL:(NSURL *)url
+{
+    self.statusLabel.text = [NSString stringWithFormat:@"Unable to open url: %@", url.absoluteString];
+}
+
+
+#pragma mark - Actions
+
+-(IBAction)returnToSourceAction:(id)sender
+{
+    [McLuhan callURLScheme:kSourceAppUrl
+                completion:^(NSURL *url, NSError *error) {if (error) {[self didFailToOpenURL:url];}}];
+}
+
 
 #pragma mark - Notification Handlers
 
@@ -35,18 +49,10 @@
     NSString *action = notification.userInfo[kMcLuhanUrlActionKey];
     NSString *params = notification.userInfo[kMcLuhanUrlParamsKey];
     
-    if ([action isEqualToString:kSendAction]) {
-        [self acceptText:params];
-    }
+    if ([action isEqualToString:kSendAction]) {[self acceptText:params];}
 }
 
 #pragma mark - View Lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -56,7 +62,6 @@
                                              selector:@selector(customUrlSchemeRoutes:)
                                                  name:kDidOpenUrlNotificationName
                                                object:nil];
-    
 }
 
 @end
