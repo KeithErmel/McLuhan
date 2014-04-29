@@ -14,5 +14,4 @@
 @interface SAAppDelegate : McLuhanAppDelegate
 
 +(SAAppDelegate *)appDelegate;
--(void)callTargetAppWithText:(NSString *)text completion:(CallURLSchemeCompletion)completion;
 @end

@@ -13,6 +13,7 @@ extern NSString *const kSourceAppUrl;
 extern NSString *const kTargetAppUrl;
 
 extern NSString *const kNoOpAction;
+extern NSString *const kReplyAction;
 extern NSString *const kSendAction;
 extern NSString *const kSendReceiveAction;
 

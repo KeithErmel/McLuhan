@@ -19,11 +19,6 @@
     return (SAAppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
--(void)callTargetAppWithText:(NSString *)text completion:(CallURLSchemeCompletion)completion
-{
-    [McLuhan callURLScheme:kTargetAppUrl action:kSendAction param:text completion:completion];
-}
-
 
 #pragma mark - Application Lifecycle
 

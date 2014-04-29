@@ -25,17 +25,17 @@ NSString *const kMcLuhanUrlParamsKey    = @"mcluhan.url.params";
 @implementation McLuhan
 
 #pragma mark - Public API
-+(void)callURLScheme:(NSString *)urlScheme
-          completion:(CallURLSchemeCompletion)completion
++(void)invokeApp:(NSString *)urlScheme
+      completion:(CallURLSchemeCompletion)completion
 {
     NSURL *url = [NSURL URLWithString:[McLuhan buildURLWithScheme:urlScheme]];
     [McLuhan callURL:url completion:completion];
 }
 
-+(void)callURLScheme:(NSString *)urlScheme
-              action:(NSString *)action
-               param:(NSString *)param
-          completion:(CallURLSchemeCompletion)completion
++(void)invokeApp:(NSString *)urlScheme
+          action:(NSString *)action
+           param:(NSString *)param
+      completion:(CallURLSchemeCompletion)completion
 {
     NSURL *url = [NSURL URLWithString:[McLuhan buildURLWithScheme:urlScheme action:action param:param]];
     [McLuhan callURL:url completion:completion];

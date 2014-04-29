@@ -13,9 +13,9 @@ NSString *const kSourceAppUrl   = @"mcluhan.sourceapp";
 NSString *const kTargetAppUrl   = @"mcluhan.targetapp";
 
 NSString *const kNoOpAction         = @"no.op";
+NSString *const kReplyAction        = @"reply";
 NSString *const kSendAction         = @"send";
 NSString *const kSendReceiveAction  = @"send.receive";
-NSString *const kReplyAction        = @"reply";
 
 NSString *const kTestMessage    = @"test";
 

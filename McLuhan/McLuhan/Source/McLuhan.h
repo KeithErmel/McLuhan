@@ -24,11 +24,11 @@ typedef void(^CallURLSchemeCompletion)(NSURL *url, NSError *error);
 
 
 @interface McLuhan : NSObject
-+(void)callURLScheme:(NSString *)urlScheme
-          completion:(CallURLSchemeCompletion)completion;
++(void)invokeApp:(NSString *)urlScheme
+      completion:(CallURLSchemeCompletion)completion;
 
-+(void)callURLScheme:(NSString *)urlScheme
-              action:(NSString *)action
-               param:(NSString *)param
-          completion:(CallURLSchemeCompletion)completion;
++(void)invokeApp:(NSString *)urlScheme
+          action:(NSString *)action
+           param:(NSString *)param
+      completion:(CallURLSchemeCompletion)completion;
 @end

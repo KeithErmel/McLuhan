@@ -10,7 +10,6 @@
 #import "Luokat/UIStoryboardSegue+Utils.h"
 #import "McLuhan/McLuhan.h"
 #import "McLuhanExampleCommon/McLuhanExampleCommon.h"
-#import "SAAppDelegate.h"
 #import "SASendViewController.h"
 
 
@@ -38,10 +37,10 @@ NSString *const kSendMessageSegue   = @"sendMessageSegue";
 
 -(IBAction)sendTestAction:(id)sender
 {
-    [[SAAppDelegate appDelegate] callTargetAppWithText:kTestMessage completion:^(NSURL *url, NSError *error) {
-        if (error) {
-            [self didFailToOpenURL:url];
-        }
+    [McLuhan invokeApp:kTargetAppUrl
+                action:kSendAction
+                 param:kTestMessage
+            completion:^(NSURL *url, NSError *error) {if (error) {[self didFailToOpenURL:url];}
     }];
 }
 

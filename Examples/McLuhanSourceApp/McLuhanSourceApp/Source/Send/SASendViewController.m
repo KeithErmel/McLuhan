@@ -9,7 +9,6 @@
 #import "SASendViewController.h"
 #import "McLuhan/McLuhan.h"
 #import "McLuhanExampleCommon/McLuhanExampleCommon.h"
-#import "SAAppDelegate.h"
 
 
 @interface SASendViewController ()<UITextFieldDelegate>
@@ -26,11 +25,8 @@
     [self.sendTextInput resignFirstResponder];
     [self.navigationController popViewControllerAnimated:YES];
     
-    SAAppDelegate *appDelegate = [SAAppDelegate appDelegate];
-    [appDelegate callTargetAppWithText:self.sendTextInput.text
-                            completion:^(NSURL *url, NSError *error) {
-                                if (error) {[self.delegate didFailToOpenURL:url];}
-                            }];
+    [McLuhan invokeApp:kTargetAppUrl
+            completion:^(NSURL *url, NSError *error) {if (error) {[self.delegate didFailToOpenURL:url];}}];
     return YES;
 }
 

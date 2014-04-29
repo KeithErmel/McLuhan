@@ -32,12 +32,10 @@
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(500 * NSEC_PER_MSEC)), dispatch_get_main_queue(), ^{
         NSString *replyText = [NSString stringWithFormat:@"%@:%@", @"did.receive.text", params];
-        [McLuhan callURLScheme:kSourceAppUrl
-                        action:kReplyAction
-                         param:replyText
-                    completion:^(NSURL *url, NSError *error) {
-                        if (error) {[self didFailToOpenURL:url];}
-                    }];
+        [McLuhan invokeApp:kSourceAppUrl
+                    action:kReplyAction
+                     param:replyText
+                completion:^(NSURL *url, NSError *error) {if (error) {[self didFailToOpenURL:url];}}];
     });
 }
 
@@ -51,8 +49,8 @@
 
 -(IBAction)returnToSourceAction:(id)sender
 {
-    [McLuhan callURLScheme:kSourceAppUrl
-                completion:^(NSURL *url, NSError *error) {if (error) {[self didFailToOpenURL:url];}}];
+    [McLuhan invokeApp:kSourceAppUrl
+            completion:^(NSURL *url, NSError *error) {if (error) {[self didFailToOpenURL:url];}}];
 }
 
 

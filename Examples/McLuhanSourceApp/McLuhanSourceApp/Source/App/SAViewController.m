@@ -28,7 +28,6 @@ NSString *const kSourceTargetTwoWaySegue    = @"sourceTargetTwoWaySegue";
 -(void)acceptReply:(NSString *)params
 {
     self.sendReceiveVC.replyText = params;
-    [self.navigationController pushViewController:self.sendReceiveVC animated:YES];
 }
 
 

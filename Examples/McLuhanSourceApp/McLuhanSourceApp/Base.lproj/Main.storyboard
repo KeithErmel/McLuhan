@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1608" y="-187"/>
         </scene>
-        <!--Send Actions View Controller-->
+        <!--Send Actions View Controller - Source App-->
         <scene sceneID="f6f-qb-eKH">
             <objects>
                 <viewController id="NfR-uT-04F" customClass="SASendActionsViewController" sceneMemberID="viewController">
@@ -138,7 +138,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="owY-Ya-JRK"/>
+                    <navigationItem key="navigationItem" title="Source App" id="owY-Ya-JRK"/>
                     <connections>
                         <outlet property="statusLabel" destination="OcV-hB-R1a" id="8oB-Df-ARX"/>
                     </connections>
@@ -147,7 +147,7 @@
             </objects>
             <point key="canvasLocation" x="1160" y="-187"/>
         </scene>
-        <!--Send Receive View Controller-->
+        <!--Send Receive View Controller - Source App-->
         <scene sceneID="Vld-2x-IxT">
             <objects>
                 <viewController id="3gR-gZ-eR1" customClass="SASendReceiveViewController" sceneMemberID="viewController">
@@ -217,7 +217,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gKj-Bc-efu"/>
+                    <navigationItem key="navigationItem" title="Source App" id="gKj-Bc-efu"/>
                     <connections>
                         <outlet property="replyTextLabel" destination="UNf-kh-cDX" id="IqW-ku-UvM"/>
                         <outlet property="sendTextInput" destination="poP-VY-acJ" id="gQQ-sc-iKd"/>

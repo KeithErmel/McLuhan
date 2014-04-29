@@ -44,14 +44,11 @@
 {
     if (textField == self.sendTextInput) {
         [self.sendTextInput resignFirstResponder];
-        [self.navigationController popViewControllerAnimated:YES];
         
-        [McLuhan callURLScheme:kTargetAppUrl
-                        action:kSendReceiveAction
-                         param:self.sendTextInput.text
-                    completion:^(NSURL *url, NSError *error) {
-                        if (error) {[self didFailToOpenURL:url];}
-                    }];
+        [McLuhan invokeApp:kTargetAppUrl
+                    action:kSendReceiveAction
+                     param:self.sendTextInput.text
+                completion:^(NSURL *url, NSError *error) {if (error) {[self didFailToOpenURL:url];}}];
     }
     return YES;
 }
