@@ -8,28 +8,46 @@
 
 #import "SAViewController.h"
 #import "Luokat/UIStoryboardSegue+Utils.h"
+#import "McLuhan/McLuhan.h"
+#import "McLuhanExampleCommon/McLuhanExampleCommon.h"
 #import "SASendReceiveViewController.h"
 
 
-NSString *const kSourceTargetOneWaySegue    = @"sourceTargetOneWaySegue";
 NSString *const kSourceTargetTwoWaySegue    = @"sourceTargetTwoWaySegue";
 
 
 @interface SAViewController ()
+@property (strong, nonatomic, readonly) SASendReceiveViewController *sendReceiveVC;
 @end
 
 
 @implementation SAViewController
 
+#pragma mark - Internal API
+
+-(void)acceptReply:(NSString *)params
+{
+    self.sendReceiveVC.replyText = params;
+    [self.navigationController pushViewController:self.sendReceiveVC animated:YES];
+}
+
+
+#pragma mark - Notification Handlers
+
+-(void)customUrlSchemeRoutes:(NSNotification *)notification
+{
+    NSLog(@"customUrlSchemeRoutes: %@", notification.userInfo);
+    NSString *action = notification.userInfo[kMcLuhanUrlActionKey];
+    NSString *params = notification.userInfo[kMcLuhanUrlParamsKey];
+    
+    if ([action isEqualToString:kReplyAction]) {[self acceptReply:params];}
+}
 
 #pragma mark - Configuration
 
--(void)configureSourceVC:(UIStoryboardSegue *)segue
+-(void)configureSendReceiveVC:(UIStoryboardSegue *)segue
 {
-}
-
--(void)configureTargetVC:(UIStoryboardSegue *)segue
-{
+    _sendReceiveVC = (SASendReceiveViewController *)segue.destinationViewController;
 }
 
 
@@ -37,8 +55,9 @@ NSString *const kSourceTargetTwoWaySegue    = @"sourceTargetTwoWaySegue";
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue isNamed:kSourceTargetOneWaySegue]) {[self configureSourceVC:segue];}
-    else if ([segue isNamed:kSourceTargetTwoWaySegue]) {[self configureTargetVC:segue];}
+    if ([segue isNamed:kSourceTargetTwoWaySegue]) {
+        [self configureSendReceiveVC:segue];
+    }
 }
 
 
@@ -47,6 +66,11 @@ NSString *const kSourceTargetTwoWaySegue    = @"sourceTargetTwoWaySegue";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(customUrlSchemeRoutes:)
+                                                 name:kDidOpenUrlNotificationName
+                                               object:nil];
 }
 
 @end

@@ -16,6 +16,4 @@
 
 @interface SASendViewController : UIViewController
 @property (weak, nonatomic) id<SASendViewControllerDelegate> delegate;
-
--(void)sendMessage:(NSString *)message;
 @end

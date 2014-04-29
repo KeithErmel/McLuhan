@@ -26,6 +26,21 @@
     self.receivedTextLabel.text = params;
 }
 
+-(void)acceptAndReplyToText:(NSString *)params
+{
+    self.receivedTextLabel.text = params;
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(500 * NSEC_PER_MSEC)), dispatch_get_main_queue(), ^{
+        NSString *replyText = [NSString stringWithFormat:@"%@:%@", @"did.receive.text", params];
+        [McLuhan callURLScheme:kSourceAppUrl
+                        action:kReplyAction
+                         param:replyText
+                    completion:^(NSURL *url, NSError *error) {
+                        if (error) {[self didFailToOpenURL:url];}
+                    }];
+    });
+}
+
 -(void)didFailToOpenURL:(NSURL *)url
 {
     self.statusLabel.text = [NSString stringWithFormat:@"Unable to open url: %@", url.absoluteString];
@@ -50,6 +65,7 @@
     NSString *params = notification.userInfo[kMcLuhanUrlParamsKey];
     
     if ([action isEqualToString:kSendAction]) {[self acceptText:params];}
+    else if ([action isEqualToString:kSendReceiveAction]) {[self acceptAndReplyToText:params];}
 }
 
 #pragma mark - View Lifecycle

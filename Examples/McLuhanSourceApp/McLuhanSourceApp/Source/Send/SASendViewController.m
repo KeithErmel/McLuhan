@@ -19,29 +19,18 @@
 
 @implementation SASendViewController
 
-#pragma mark - Public API
-
--(void)sendMessage:(NSString *)message {[self callTargetAppWithText:message];}
-
-
-#pragma mark - Internal API
-
--(void)callTargetAppWithText:(NSString *)text
-{
-    [McLuhan callURLScheme:kTargetAppUrl
-                    action:kSendAction
-                     param:text
-                completion:^(NSURL *url, NSError *error) {if (error) {[self.delegate didFailToOpenURL:url];}}];
-}
-
-
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.sendTextInput resignFirstResponder];
     [self.navigationController popViewControllerAnimated:YES];
-    [self callTargetAppWithText:self.sendTextInput.text];
+    
+    SAAppDelegate *appDelegate = [SAAppDelegate appDelegate];
+    [appDelegate callTargetAppWithText:self.sendTextInput.text
+                            completion:^(NSURL *url, NSError *error) {
+                                if (error) {[self.delegate didFailToOpenURL:url];}
+                            }];
     return YES;
 }
 

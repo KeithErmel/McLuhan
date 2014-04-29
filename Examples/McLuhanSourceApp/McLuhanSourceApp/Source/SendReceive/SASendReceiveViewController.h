@@ -10,4 +10,5 @@
 
 
 @interface SASendReceiveViewController : UIViewController
+@property (strong, nonatomic) NSString *replyText;
 @end

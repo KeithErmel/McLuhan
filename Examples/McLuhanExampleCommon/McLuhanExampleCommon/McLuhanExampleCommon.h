@@ -14,6 +14,7 @@ extern NSString *const kTargetAppUrl;
 
 extern NSString *const kNoOpAction;
 extern NSString *const kSendAction;
+extern NSString *const kSendReceiveAction;
 
 extern NSString *const kTestMessage;
 

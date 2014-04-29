@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "McLuhan/McLuhan.h"
+#import "McLuhan/McLuhanAppDelegate.h"
 
-@interface SAAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@interface SAAppDelegate : McLuhanAppDelegate
 
++(SAAppDelegate *)appDelegate;
+-(void)callTargetAppWithText:(NSString *)text completion:(CallURLSchemeCompletion)completion;
 @end
